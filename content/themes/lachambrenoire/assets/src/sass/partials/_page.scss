@@ -1,0 +1,70 @@
+.page-open {
+  .article-list, .artist-page, .other-mounth {
+    display: none;
+  }
+  .content-page {
+    display: block;
+  }
+}
+
+.home-loader{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: $mainColor;
+  z-index: 1000000;
+  bottom: 0;
+  left: 0;
+}
+
+.content-page {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  header {
+    background: none;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 70px;
+    margin-top: 95px;
+    .color-bar {
+      display: inline-block;
+      height: 5px;
+      width: 50px;
+      background-color: $mainColor;
+      margin-right: 50px;
+      position: relative;
+      top: -8px;
+    }
+    h1 {
+      font-size: 30px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: bold;
+      word-spacing: 10px;
+    }
+  }
+  .content {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: #707478;
+    font-size: 13px;
+    line-height: 30px;
+    p, h3 {
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+    h3 {
+      text-transform: uppercase;
+      margin: 20px auto;
+    }
+  }
+}

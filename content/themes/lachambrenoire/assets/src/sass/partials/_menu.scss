@@ -1,0 +1,160 @@
+.menu-open {
+  .menu-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: rgba(80, 133, 191, 0.71);
+  }
+  .menu-holder:not(.artists-list) {
+    padding: 30px 0;
+    width: 50vw;
+    margin: auto;
+    background: white;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    z-index: 15;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    ul {
+      margin-top: 30px;
+      li {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Brandon Grotesque';
+        color: $title-color;
+        font-size: 36px;
+        margin: 30px auto;
+        cursor: pointer;
+        a{
+		  position:relative;
+          text-decoration: none;
+          color: $title-color;
+		  transition: color 0.8s ease;
+          &:hover {
+            text-decoration: none;
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    .links li:hover {
+      color: $mainColor;
+    }
+  }
+  .menu-overlay, .menu-holder:not(.artists-list) {
+    @include fadeIn(
+    $duration: 1s,
+    $function: ease
+    );
+  }
+  .menu-holder:not(.artists-list) {
+    ul.animate {
+      li.fadeInUp {
+        @include fadeInUp(
+        $duration: 1s,
+        $function: ease
+        );
+      }
+      li.fadeInUp:nth-child(4n+1) {
+        @include fadeInUp(
+        $delay: 0.4s
+        )
+      }
+      li.fadeInUp:nth-child(4n+2) {
+        @include fadeInUp(
+        $delay: 0.6s
+        )
+      }
+      li.fadeInUp:nth-child(4n+3) {
+        @include fadeInUp(
+        $delay: 0.8s
+        )
+      }
+      li.fadeInUp:nth-child(4n+4) {
+        @include fadeInUp(
+        $delay: 1s
+        )
+      }
+    }
+  }
+  .border {
+    .right, .left, .top, .bottom {
+      background-color: $mainColor;
+    }
+  }
+  footer.content-info {
+    color: $title-color;
+    a, a:visited {
+      color: $title-color;
+    }
+  }
+  .menu {
+    opacity: 0;
+    z-index: 11;
+  }
+  .menu-close {
+    background-color: $title-color;
+    color: white;
+    opacity: 1;
+    z-index: 12;
+    /* Effect 5: same word slide in */
+    a {
+      overflow: hidden;
+      display: inline-block;
+      width:100%;
+
+      &:hover, &:focus{
+        background-color: #fff;
+        color: #414141;
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+        &::before {
+          position: absolute;
+          top: 100%;
+          content: attr(data-hover);
+          font-weight: 700;
+          -webkit-transform: translate3d(0,0,0);
+          -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+        }
+      }
+      &:hover span,
+      &:focus span {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+  }
+  .border {
+    .right, .left, .top, .bottom {
+      z-index: 20;
+    }
+  }
+}
+.fadeOut.menu-overlay, .fadeOut.menu-holder:not(.artists-list) {
+  @include fadeOut(
+  $duration: 1s,
+  $function: ease
+  )
+}
+
+.fadeOutMobile.menu-overlay, .fadeOutMobile.menu-holder:not(.artists-list) {
+  opacity: 0;
+}
+.menu-holder {
+  display: none;
+}

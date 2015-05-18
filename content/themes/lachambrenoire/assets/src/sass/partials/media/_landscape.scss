@@ -1,0 +1,190 @@
+//Age-verify
+@media only screen and (max-width: 960px) {
+	#av-overlay {
+		@include boxSizing(border-box);
+		height: 100%;
+		margin: 0;
+		width: 100%;
+		.top {
+			.descript {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.form {
+			margin-top: 25px;
+		}
+	}
+	@media only screen and (max-height: 600px) {
+		#av-overlay {
+			padding: 20px;
+			.top {
+				height: 120px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 640px) {
+	#av-overlay {
+		.top {
+			height: 100px;
+			.logo {
+				height: 80px;
+				width: 120px;
+			}
+			.descript {
+				@include boxSizing(border-box);
+				float: right;
+				font-size: 12px;
+				padding: 5px 10px;
+				width: calc(100% - 120px);
+			}
+		}
+		.form {
+			margin: 0;
+			.terms {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+
+//Artist
+@media only screen and (max-width: 1200px) {
+	.other-artist {
+		width: 90%;
+		.artist-slider {
+			width: 100%;
+			min-width: 750px;
+			.slick-list {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+//Menu
+@media only screen and (max-width: 960px) {
+	.menu-open {
+		.menu-holder {
+			.logo {
+				height: 180px;
+				width: 180px;
+			}
+			#menu-menu {
+				margin-top: 0;
+				li {
+					margin: 20px 0;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-device-width : 319px) and (max-width: 736px) {
+	.menu-open {
+		.menu-holder {
+			margin: 0 !important;
+			padding-top: 70px !important;
+			width: 100% !important;
+			.logo {
+				height: 120px;
+				width: 120px;
+			}
+			#menu-menu {
+				li {
+					float: left;
+					font-size: 24px;
+					//width: 33%;
+				  width: 25%;
+				}
+			}
+		}
+		footer.content-info {
+			display: none;
+		}
+	}
+
+  .artists-list-open{
+	.artists-list{
+	  padding: 90px;
+	  width: 100%;
+	  z-index: 11;
+	}
+	#see-all{
+	  z-index: 10;
+	}
+	header.socials{
+	  z-index: 10;
+	}
+	.artists-list ul li .info{
+	  padding: 10px;
+	  width: calc(100% - 130px);
+	  h2{
+		font-size: 17px;
+		line-height: 18px;
+	  }
+	  p{
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 18px;
+	  }
+	}
+  }
+  article.about-us{
+    margin-bottom: 30px;
+    z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  // Header
+  header {
+	.logo.single {
+	  height: 120px;
+	  width: 120px;
+	  top: 40%;
+	}
+  }
+
+  section.gallery {
+	//margin-top: 70vh;
+	#see-all {
+	  top: 10px;
+	  margin-top: 0;
+	  left: 65%;
+	}
+
+	.gallery-list {
+	  .artist-wrapper {
+		.artist-info {
+		  background-color: #fff;
+		  display: block;
+		  height: auto;
+		  opacity: 1;
+		  padding: 10px 0;
+		  position: relative;
+		  top: -10vh;
+		  width: calc(100% - 30px);
+		  .info {
+			.italic {
+			  font-size: 20px;
+			  font-weight: 500;
+			}
+			.center {
+			  h1 {
+				font-size: 37px;
+				padding-bottom: 20px;
+			  }
+			}
+			.legend {
+			  font-size: 18px;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+

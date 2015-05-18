@@ -1,0 +1,28 @@
+// Grid settings
+// -------------------------
+
+$grid-columns:          12;
+$main-sm-columns:       $grid-columns;
+$sidebar-sm-columns:    4;
+
+
+
+// Brand colors
+// -------------------------
+
+$mainColor: #4e84be;
+
+$title-color: #2f2f2f;
+$text-color: #414141;
+
+
+// Glyphicons path
+// -------------------------
+
+$icon-font-path:        "../../../vendor/bootstrap-sass-official/assets/fonts/";
+
+$easing: ease;
+
+
+// Z index
+$topOfAll: 9999;

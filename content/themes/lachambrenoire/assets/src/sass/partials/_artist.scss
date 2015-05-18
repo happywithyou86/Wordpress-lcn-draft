@@ -1,0 +1,240 @@
+.page-template-template-artists, .single-artists {
+  .wrap.container {
+    height: 100%;
+    .content.row {
+      height: 100%;
+      main.main {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.artist-page {
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  .text-holder {
+    float: left;
+    padding-left: 200px;
+    padding-right: 7%;
+    margin-top: 100px;
+    width: calc(50% - 200px);
+    .artist-title {
+      padding-left: 120px;
+      margin-bottom: 70px;
+      .mounth {
+        display: block;
+        font-family: 'Brandon Grotesque';
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .by {
+        display: block;
+        font-family: 'Walbaum MT Std';
+        font-style: italic;
+        font-size: 20px;
+        margin: 8px auto;
+      }
+      h1 {
+        position: relative;
+        @include artistTitle();
+        &:before {
+          content: '';
+          height: 5px;
+          width: 50px;
+          background-color: $mainColor;
+          display: block;
+          position: absolute;
+          left: -120px;
+          top: 15px;
+        }
+      }
+    }
+    .artist-content{
+      height: calc(100vh - 20px);
+    }
+    p {
+      color: #707478;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+  .img-holder {
+    float: right;
+    height: 100%;
+    width: calc(43% - 20px);
+    text-align: center;
+    position: relative;
+    img {
+      background-position: center center;
+      @include backgroundSize(cover);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+    button {
+      height: 50px;
+      width: 280px;
+      border: 5px solid white;
+      bottom: 70px;
+      @include button(#fff, $mainColor);
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 15px;
+      font-family: 'Brandon Grotesque';
+      font-weight: 500;
+      letter-spacing: 2px;
+      background: transparent;
+      position: absolute;
+      left: 0; right: 0;
+      margin: auto;
+      bottom: 70px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      &:focus, &:active {
+        outline: none;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      &:hover, &:active{
+        color: $mainColor;
+        background: #fff;
+      }
+    }
+  }
+}
+.other-artist {
+  margin: 0 auto;
+  padding: 70px;
+  // padding-left: 115px;
+  // width: calc(100% - 115px);
+  position: relative;
+  width: 80%;
+  .indication {
+    width: 115px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 148px;
+    font-size: 10px;
+    color: $text-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      background-image: url('../../../img/icons/left_arrow.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      @include backgroundSize(cover);
+      @include vertical-align();
+      left: 0; right: 0;
+      margin: -30px auto 0;
+      position: absolute;
+    }
+  }
+  .chevron {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .chevron-previous {
+    float: left;
+    margin-left: 10%;
+  }
+  .chevron-next {
+    float: right;
+    margin-right: 10%;
+  }
+  .artist {
+    height: 148px;
+    width: 280px;
+    border: 5px solid $mainColor;
+    display: inline-block;
+    margin: 0 12px;
+    color: #333333;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Brandon Grotesque';
+    font-size: 18px;
+    font-weight: bold;
+    @include transition(all, 400ms, ease);
+    overflow: hidden;
+    &.activated{
+      cursor: pointer;
+    }
+    .name {
+      display: none;
+      font-size: 15px;
+    }
+    .coming-soon{
+      display: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+    .mounth {
+      display: inline-block;
+      @include vertical-align();
+    }
+    &:before {
+      content: '';
+      height: 5px;
+      width: 30px;
+      background: $mainColor;
+      display: inline-block;
+      margin-right: 30px;
+      position: relative;
+      top: 5px;
+    }
+    &:first-child {
+      //margin-left: 0;
+    }
+    &:last-child {
+      //margin-right: 0;
+    }
+    &.activated:hover{
+      line-height: 148px!important;
+      .name {
+        margin-top: 0px;
+      }
+    }
+    &:hover {
+      background-color: $mainColor;
+      line-height: 48px;
+      color: white;
+      .name {
+        margin-top: 20px;
+        display: inline-block;
+      }
+      .coming-soon{
+        display: inline-block;
+      }
+      .mounth {
+        display: none;
+      }
+      &:before {
+        background-color: white;
+        top: -3px;
+      }
+    }
+  }
+}

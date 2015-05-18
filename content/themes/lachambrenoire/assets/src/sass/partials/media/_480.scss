@@ -1,0 +1,267 @@
+//Age verify
+#av-overlay {
+	padding: 20px 10px;
+	.top {
+		.logo {
+			height: 100px;
+		}
+		.descript {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+	.dropdown select {
+		background-position: 60px 8px;
+		padding-left: 10px;
+		width: 80px;
+	}
+	.terms {
+		input[type=checkbox]:not(old) + label {
+			width: 260px;
+		}
+	}
+}
+
+
+//Article
+article {
+	.date {
+		height: 110px;
+		width: 45px;
+		.day {
+			font-size: 28px;
+		}
+		.mounth {
+			font-size: 14px;
+		}
+		.clock {
+			height: 14px;
+			margin: 10px auto;
+			width: 14px;
+		}
+	}
+	.social {
+		width: 120px;
+		.fa {
+			font-size: 18px;
+			height: 35px;
+			line-height: 35px;
+			width: 35px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+
+//Artist
+.artist-page {
+	.text-holder {
+		margin: 10px 20px;
+  		width: calc(100% - 40px);
+		.artist-title {
+			margin-bottom: 30px;
+			.mounth {
+				font-size: 16px;
+			}
+			.by {
+				font-size: 20px;
+			}
+			h1 {
+				font-size: 24px;
+			}
+			h1:before {
+				top: -80px;
+			}
+		}
+		p {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+	.img-holder {
+		button { 
+			font-size: 18px;
+  			height: 60px;
+			width: 270px;
+		}
+	}
+}
+
+
+//Contact
+.contact .page-header {
+	margin-bottom: 20px;
+}
+.contact .main {
+	padding: 40px;
+	h1 {
+	}
+	form {
+		p {
+			margin: 10px 0;
+			span input, span textarea {
+			}
+			span textarea {
+				height: 100px;
+			}
+			input[type="submit"] {
+			}
+		}
+	}
+}
+
+
+//Footer
+footer.content-info {
+	background: transparent;
+	@include boxSizing(border-box);
+	color: #fff;
+	font-size: 10px;
+	line-height: 12px;
+	padding: 0 10%;
+	width: 100%;
+	a {
+		color: #fff !important;
+		text-decoration: none;
+	}
+}
+
+//Gallery
+section.gallery {
+	.gallery-list {
+		.artist-wrapper {
+			.artist-info {
+				padding: 10px 0;
+				.info {
+					.center {
+						h1 {
+							font-size: 36px;
+						}
+						.legend {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+		.photo {
+			&:nth-child(2) {
+				margin-top: -120px;
+			}
+			figure {
+				.social {
+					width: 120px;
+					.fa {
+						font-size: 18px;
+						height: 35px;
+						line-height: 35px;
+						width: 35px;
+					}
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+.page.gallery .border {
+	.right, .left {
+		width: 5px;
+	}
+	.top, .bottom {
+		height: 5px;
+	}
+}
+
+
+//Header
+header {
+	.logo.single {
+		height: 240px;
+		width: 240px;
+	}
+	.artist-holder {
+		height: 105px;
+		width: 240px;
+		top: 70%;
+		.artist {
+			padding: 5px 15px;
+			.by {
+				font-size: 21px;
+				line-height: 30px;
+			}
+			h2 {
+				font-size: 18px;
+				line-height: 40px;
+			}
+		}
+	}
+	.menu {
+		top: 25px;
+		left: 5px;
+		font-size: 14px;
+		line-height: 40px;
+		height: 40px;
+		width: 80px;
+	}
+	.socials {
+		top: 25px;
+		height: 40px;
+		left: 97px;
+		.fa {
+			font-size: 1em;
+			line-height: 40px;
+			height: 40px;
+			width: 40px;
+		}
+		.fa:first-child {
+			margin-right: 8px;
+		}
+	}
+}
+.artist-holder.big {
+	.artist {
+		padding: 10px 20px;
+		.big-title {
+			line-height: 18px;
+			.mounth {
+				font-size: 16px;
+			}
+			.separator {
+				height: 8px;
+				margin-right: calc(100% - 32px);
+				width: 32px;
+			}
+			h1 {
+				line-height: 30px;
+				font-size: 24px;
+				margin-bottom: 0;
+			}
+		}
+		.description {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+}
+
+//Menu
+.menu-open {
+	.menu-holder {
+		.logo {
+			height: 180px!important;
+			width: 180px!important;
+			margin-top: 40px!important;
+		}
+		ul {
+			li {
+				font-size: 36px!important;
+				letter-spacing: 6px;
+				margin: 40px auto!important;
+			}
+		}
+	}
+}

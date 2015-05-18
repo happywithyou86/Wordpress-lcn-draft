@@ -1,0 +1,158 @@
+//Age verify
+#av-overlay {
+	.top {
+		height: auto;
+		.logo {
+			height: 140px;
+			margin: 0 auto;
+			width: 100%;
+		}
+		.descript {
+			font-size: 24px;
+			line-height: 24px;
+			margin: 0 auto;
+			padding: 40px;
+			width: calc(100% - 40px);
+		}
+	}
+}
+
+
+//Article
+article {
+	&.terms, &.about-us {
+		width: 85%;
+		h1 {
+			font-size: 24px;
+			width: calc(85% - 20px);
+		}
+	}
+  &.about-us{
+	min-height: calc(100vh - 150px) !important;
+	height: auto;
+  }
+}
+.page.page-template-template-about-us header{
+  height: 0!important;
+}
+
+//Artist
+.artist-page {
+	.text-holder {
+		margin: 10px 40px;
+  		width: calc(100% - 80px);
+		.artist-title {
+			margin-bottom: 40px;
+			padding-top: 25px;
+			.mounth {
+				font-size: 20px;
+			}
+			.by {
+				font-size: 24px;
+			}
+			h1 {
+				font-size: 32px;
+			}
+			h1:before {
+				top: -90px;
+			}
+		}
+		p {
+			font-size: 22px;
+			line-height: 40px;
+		}
+	}
+	.img-holder {
+		button { 
+			font-size: 20px;
+  			height: 70px;
+			width: 310px;
+		}
+	}
+}
+.other-artist .artist {
+	//width: 240px !important;
+}
+
+
+//Contact
+.contact .main {
+	padding: 80px 40px;
+	h1 {
+	}
+	form {
+		p {
+			span input, span textarea {
+			}
+			span textarea {
+			}
+		}
+	}
+}
+
+
+//Footer
+footer.content-info {
+	font-size: 14px;
+}
+
+//Gallery
+section.gallery {
+	.gallery-list {
+		.artist-wrapper {
+			.artist-info {
+				padding: 10px 0;
+				.info {
+					.center {
+						h1 {
+							font-size: 45px;
+						}
+						.legend {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+		.photo {
+			&:nth-child(2) {
+				margin-top: -135px;
+			}
+			figure {
+				.social {
+					width: 160px;
+					.fa {
+						font-size: 24px;
+						height: 50px;
+						line-height: 50px;
+						width: 50px;
+					}
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//Menu
+@media only screen and (orientation: portrait) {
+	.menu-open {
+		.menu-holder {
+			.logo {
+				height: 240px!important;
+				width: 240px!important;
+				margin-top: 60px!important;
+			}
+			ul {
+				li {
+					font-size: 45px!important;
+					letter-spacing: 6px;
+					margin: 50px auto!important;
+				}
+			}
+		}
+	}
+}

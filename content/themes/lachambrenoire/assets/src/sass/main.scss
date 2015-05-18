@@ -1,0 +1,26 @@
+// bower:scss
+// endbower
+
+@import "lib/reset";
+@import "lib/mixins";
+@import "lib/slick";
+@import "lib/font_awesome/font-awesome";
+@import "lib/animate/animate";
+@import "partials/variables";
+@import "http://fonts.googleapis.com/css?family=Open+Sans:600italic,700,600";
+@import "partials/font";
+@import "partials/utilities";
+@import "partials/components";
+@import "partials/contact";
+@import "partials/menu";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/article";
+@import "partials/page";
+@import "partials/gallery";
+@import "partials/artist";
+@import "partials/slider";
+@import "partials/plugins";
+@import "partials/extra";
+
+@import "partials/mobile";

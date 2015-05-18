@@ -1,0 +1,214 @@
+#av-overlay-wrap {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: #E6E6E6;
+	z-index: 10000;
+	display: block;
+	top: 0;
+	left: 0;
+	font-family: "Open Sans";
+	font-weight: 600;
+}
+
+#av-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: 10001;
+	padding: 50px 40px 40px 50px;
+	-webkit-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	   -moz-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+#av-overlay h1 {
+	margin-bottom: 20px;
+}
+#av-overlay p {
+	margin-bottom: 10px;
+}
+#av-overlay .submit {
+	margin-bottom: 0;
+}
+
+#av-overlay input[type=text] {
+	width: 50px;
+	outline: none;
+}
+
+#av-overlay .error {
+	padding: 12px;
+	background-color: #ffebe8;
+	border: 1px solid #c00;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+#av-overlay .top {
+	width:100%;
+	height:210px;
+}
+
+#av-overlay .logo {
+
+	width: 30%;
+	height:100%;
+	background-image: url("logo.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	display:inline-block;
+}
+
+#av-overlay .descript {
+	width: 50%;
+	margin-left: 10%;
+	display:inline-block;
+	vertical-align:top;
+	font-size: 15px;
+	line-height: 25px;
+	padding-top:40px;
+	color:#797979;
+}
+
+#av-overlay .form {
+	width:100%;
+	text-align:center;
+}
+
+#av-overlay .dropdown p {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#av-overlay .dropdown select {
+	font-size: 15px;
+	border: 0 !important;  /*Removes border*/
+	-webkit-appearance: none;  /*Removes default chrome and safari style*/
+	-moz-appearance: none; /* Removes Default Firefox style*/
+	background: url('dropdown_arrow.png') no-repeat #5387c1;  /*Adds background-image*/
+	height: 32px;/*fix for mac input height*/
+	text-indent: 0.01px; /* Removes default arrow from firefox*/
+	text-overflow: "";  /*Removes default arrow from firefox*/
+	cursor: pointer;
+	border-radius: 0;
+	padding-left: 30px;
+	color: #fff;
+	background-position: 80px 8px;
+	width:100px;
+}
+
+
+#av-overlay select option {
+	text-align: center;
+}
+
+#av-overlay .terms {
+	width:100%;
+	margin:30px 0 30px 0;
+}
+
+#av-overlay input[type=checkbox]:not(old){
+  width   : 32px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+  border:0px;
+}
+#av-overlay input[type=checkbox]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 35px;
+  background   : url('checks_on.png') no-repeat 0 0;
+  line-height  : 24px;
+  vertical-align: top;
+  color:#5188c1;
+  text-align:left;
+  width:300px;
+	font-size: 13px;
+}
+
+#av-overlay input[type=checkbox]:not(old) + label a{
+	color: #5188c1;
+}
+
+#av-overlay input[type=checkbox]:not(old):checked + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 28px;
+  background   : url('checks_off.png') no-repeat 0 0;
+}
+
+#av-overlay .submit {
+	width:100%;
+	height:50px;
+}
+
+#av-overlay .submit #av_verify{
+	border:	5px solid #5286c0;
+	width: 180px;
+	height: 60px;
+	background-color:	#fff;
+	font-weight:		bold;
+	color:			#5286c0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	font-size: 22px;
+	font-family: 'Brandon Grotesque';
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#av-overlay .submit #av_verify:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#av-overlay .submit #av_verify:hover, #av-overlay .submit #av_verify:active{
+	color: #fff;
+	background: #5286c0;
+}
+
+#av-overlay .submit #av_verify:disabled{
+	border:	5px solid #666;
+	width: 180px;
+	height: 60px;
+	font-size:		16px;
+	background-color:	#fff;
+	font-weight:		bold;
+	color:			#666;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+/* Minimum width of 400 pixels. */
+@media screen and (min-width: 800px) {
+
+	#av-overlay {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 600px;
+		height: 440px;
+		margin: 100px auto 0 auto;
+	}
+}
+@media only screen and (max-height: 700px) {
+
+	#av-overlay {
+		margin-top: 5%;
+	}
+}

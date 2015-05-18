@@ -1,0 +1,170 @@
+body.about-us {
+  min-height: 0;
+  height: auto;
+}
+.article-list {
+  padding: 5px 5px;
+}
+.menu-open{
+  article.about-us{
+    z-index: -1;
+  }
+}
+article {
+  &.terms, &.about-us{
+    font-family: 'Open Sans', Arial, sans-serif!important;
+    width: 520px;
+    margin: 100px auto 0;
+    float: none!important;
+    position: relative;
+    h1 {
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 70px;
+      position: relative;
+      left: 100px;
+      letter-spacing: 3px;
+      &:before {
+        content: '';
+        height: 5px;
+        width: 50px;
+        background-color: $mainColor;
+        display: block;
+        position: absolute;
+        left: -100px;
+        top: 15px;
+      }
+    }
+    p{
+      color: #707478;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 15px;
+      margin-bottom: 22px;
+      line-height: 30px;
+      text-align: left;
+    }
+    a {
+      color: $text-color !important;
+      text-decoration: none;
+    }
+  }
+  &.about-us{
+    background: white;
+    padding: 20px;
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+  }
+  width: calc(50% - 15px);
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+  border: 5px solid white;
+  &:nth-child(even) {
+    //float: right;
+    //border-right: none;
+  }
+  &:nth-child(odd){
+    //float: left;
+    //border-left: none;
+  }
+  .date {
+    background: white;
+    width: 40px;
+    height: 95px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: $title-color;
+    font-family: 'Brandon Grotesque';
+    font-weight: bold;
+    .day {
+      font-size: 23px;
+    }
+    .mounth {
+      font-size: 11px;
+    }
+    .clock {
+      display: block;
+      margin: 10px auto;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 5px;
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+  .social {
+    width: 110px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    &:hover {
+      p {
+        opacity: 1;
+      }
+    }
+    p {
+      text-align: center;
+      color: white;
+      margin-bottom: 15px;
+      opacity: 0;
+      font-size: 13px;
+      @include transition(all, 400ms, ease);
+    }
+    .share-btn{
+      &:nth-child(even){
+        float: left;
+        margin-left: 5px;
+      }
+      &:nth-child(odd){
+        float: right;
+        margin-right: 5px;
+      }
+    }
+    .fa {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+      font-size: 15px;
+      text-align: center;
+      cursor: pointer;
+      @include transition(all, 400ms, ease);
+      &:hover {
+        background: $text-color;
+        border-color: $text-color;
+      }
+    }
+  }
+
+.type1 {
+  .date:after {
+    background-color: rgba(130, 130, 130, 0.6);
+  }
+}
+.type2 {
+  .date:after {
+    background-color: #5085bf;
+  }
+}
+.type3 {
+  .date:after {
+    background-color: #2f2f2f;
+  }
+}

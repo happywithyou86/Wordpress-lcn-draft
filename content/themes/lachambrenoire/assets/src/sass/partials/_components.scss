@@ -1,0 +1,121 @@
+html, body {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Fonts
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Brandon Grotesque';
+  font-weight: 400;
+}
+p {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+strong {
+  font-weight: bold;
+}
+.italic {
+  font-family: 'Walbaum MT Std';
+  font-style: italic;
+  text-transform: none;
+}
+
+// Icons
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.clock {
+  height: 13px;
+  width: 13px;
+  background-image: url('../../../img/icons/clock.png');
+}
+.close {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
+    height: 100%;
+    width: 3px;
+    display: block;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    margin: auto;
+  }
+  &:before {
+    @include transform(rotate(45deg));
+  }
+  &:after {
+    @include transform(rotate(-45deg));
+  }
+}
+.chevron {
+  height: 16px;
+  width: 11px;
+}
+.chevron-previous {
+  background-image: url('../../../img/icons/previous.png');
+}
+.chevron-next {
+  background-image: url('../../../img/icons/next.png');
+}
+.up {
+  height: 10px;
+  width: 5px;
+  background-image: url('../../../img/icons/up.png');
+}
+
+@mixin button($color, $hoverColor){
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Brandon Grotesque';
+  font-weight: 500;
+  letter-spacing: 2px;
+  background: transparent;
+  position: absolute;
+  left: 0; right: 0;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:focus, &:active {
+    outline: none;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:hover, &:active{
+    color: $hoverColor!important;
+    background: $color;
+  }
+}
+
+@mixin artistTitle(){
+  color: #2f2f2f;
+  display: inline-block;
+  font-size: 30px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
